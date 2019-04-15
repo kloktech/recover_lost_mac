@@ -7,18 +7,18 @@ if [ -z "${PREY_API_KEY+x}" -o -z "${DEV_ID+x}" ]; then
   exit 1
 fi
 
-# Replace Prey ID with environmental ID
+# Replace Prey ID with environmental ID in postinstall script
 sed -e "s/PREY_API_KEY/${PREY_API_KEY}/g" scripts/postinstall.template > scripts/postinstall
 
 chmod a+x scripts/postinstall
 
-# Build and sign the package
+# Build component package that installs prey with given API key
 pkgbuild --identifier ${PACKAGE_IDENTIFIER} \
 --nopayload \
 --scripts scripts \
 prey.pkg
 
-# Build distribution plist
+# Build distribution plist needed for building the distribution archive
 productbuild --synthesize --package prey.pkg distribution.plist
 
 # Build distribution archive
