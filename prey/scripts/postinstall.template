@@ -1,6 +1,6 @@
 #!/bin/bash
 
-/usr/bin/curl -o /private/tmp/prey-mac.pkg "https://downloads.preyproject.com/prey-client-releases/node-client/1.8.3/prey-mac-1.8.3-x64.pkg"
+/usr/bin/curl -q -o /private/tmp/prey-mac.pkg "https://downloads.preyproject.com/prey-client-releases/node-client/1.8.3/prey-mac-1.8.3-x64.pkg"
 
 API_KEY=PREY_API_KEY sudo -E /usr/sbin/installer -pkg /private/tmp/prey-mac.pkg -target /
 

@@ -8,10 +8,10 @@ fi
 # Replace Prey ID with environmental ID
 sed -e "s/PREY_API_KEY/${PREY_API_KEY}/g" scripts/postinstall.template > scripts/postinstall
 
-# Build the package
-pkgbuild --identifier com.mycompany.pkg.prey --nopayload --scripts scripts tmp.pkg
+chmod a+x scripts/postinstall
 
-# Sign the package
-productsign --sign "${DEV_ID}" ./tmp.pkg ./prey.pkg
-
-rm tmp.pkg
+# Build and sign the package
+pkgbuild --identifier com.kloktech.pkg.prey \
+--root empty \
+--scripts scripts \
+--sign "${DEV_ID}" prey.pkg
