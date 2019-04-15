@@ -1,7 +1,16 @@
 #!/bin/bash
 
 /usr/bin/curl -q -o /private/tmp/prey-mac.pkg "https://downloads.preyproject.com/prey-client-releases/node-client/1.8.3/prey-mac-1.8.3-x64.pkg"
+# Uninstall prey first
+sudo /usr/local/lib/prey/current/bin/prey config hooks pre_uninstall && sudo rm -rf /usr/local/lib/prey /var/log/prey.log /etc/prey
 
+# Kill all prey process
+sudo pkill -9 -u prey
+
+# Download Package
+/usr/bin/curl -o /private/tmp/prey-mac.pkg "https://downloads.preyproject.com/prey-client-releases/node-client/1.8.3/prey-mac-1.8.3-x64.pkg"
+
+# Key will be substituted
 API_KEY=PREY_API_KEY sudo -E /usr/sbin/installer -pkg /private/tmp/prey-mac.pkg -target /
 
 rm /private/tmp/prey-mac.pkg
