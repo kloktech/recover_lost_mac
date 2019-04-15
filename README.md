@@ -20,7 +20,7 @@ sudo /usr/libexec/mdmclient dep nag
 MDM Package Build Issues
 https://blog.eriknicolasgomez.com/2017/04/05/Custom-DEP-Part-5-Dynamic-InstallApplication/
 
-Creating Package
+Creating Component and Distribution Package
 http://shanekirk.com/2013/10/creating-flat-packages-in-osx/
 
 OSX pkg build
