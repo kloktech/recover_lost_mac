@@ -1,0 +1,2 @@
+# TODO: replace fix password with sed substitution
+sudo /usr/bin/expect -c "spawn /usr/sbin/firmwarepasswd -setpasswd ; expect ":" ; send "crazy_lost_mac\!\\n" ; expect ":" ; send "crazy_lost_mac\!\\n" ; interact"
