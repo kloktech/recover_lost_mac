@@ -7,10 +7,10 @@ if [ -z "${DEV_ID+x}" ]; then
   exit 1
 fi
 
-#--root empty \
+#--nopayload \
 # Build and sign the package
 pkgbuild --identifier ${PACKAGE_IDENTIFIER} \
---nopayload \
+--root . \
 --scripts scripts \
 tmp.pkg
 

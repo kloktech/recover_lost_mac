@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<installer-gui-script minSpecVersion="1">
+    <pkg-ref id="com.kloktech.pkg.hello">
+        <bundle-version/>
+    </pkg-ref>
+    <options customize="never" require-scripts="false"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.kloktech.pkg.hello"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.kloktech.pkg.hello" visible="false">
+        <pkg-ref id="com.kloktech.pkg.hello"/>
+    </choice>
+    <pkg-ref id="com.kloktech.pkg.hello" version="0" onConclusion="none" installKBytes="76">#tmp.pkg</pkg-ref>
+</installer-gui-script>
