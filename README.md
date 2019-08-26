@@ -9,9 +9,9 @@ This project was born due to a need to recover a laptop when it was stolen WITHO
 /firmware_password - build firmware password setter
 
 # Get machine enroll
-# 10.13.4 and higher
+## 10.13.4 and higher
 sudo profiles renew -type enrollment
-# Lower than 10.13.4
+## Lower than 10.13.4
 sudo /usr/libexec/mdmclient dep nag
 
 
