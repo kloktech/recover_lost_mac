@@ -7,7 +7,7 @@ sudo /usr/local/lib/prey/current/bin/prey config hooks pre_uninstall && sudo rm 
 sudo pkill -9 -u prey
 
 # Download Package
-/usr/bin/curl -o /private/tmp/prey-mac.pkg "https://downloads.preyproject.com/prey-client-releases/node-client/1.8.3/prey-mac-1.8.3-x64.pkg"
+/usr/bin/curl -o /private/tmp/prey-mac.pkg "https://downloads.preyproject.com/prey-client-releases/node-client/1.9.4/prey-mac-1.9.4-x64.pkg"
 
 # Key will be substituted
 API_KEY=PREY_API_KEY sudo -E /usr/sbin/installer -pkg /private/tmp/prey-mac.pkg -target /
