@@ -1,6 +1,8 @@
 # Rrecover Lost Mac
 Tools and Documents for recovering lost mac.
 
+Blog Post: https://medium.com/devops-one-problem-at-a-time/tracking-down-a-lost-macbook-ef6550965053
+
 This project was born due to a need to recover a laptop when it was stolen WITHOUT any anti-theft or tracking software installed.  The works are half paperwork/process and half technical.  You might already have some of it setup, then you are obviously more prepare than author.
 
 
